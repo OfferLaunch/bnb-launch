@@ -23,6 +23,7 @@ body {
     font-family: 'Manrope', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
+    padding-top: 4rem;
 }
 
 /* Container */
@@ -34,22 +35,54 @@ body {
 
 /* Navigation */
 .nav-container {
-    background: var(--bg-white);
-    box-shadow: var(--shadow-sm);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    background: transparent;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.nav-container.scrolled {
+    background: var(--bg-white);
+    box-shadow: var(--shadow-md);
+    padding: 0.5rem 0;
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .nav-logo {
-    height: 3rem;
+    height: 2.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.nav-logo:first-child {
+    opacity: 1;
+}
+
+.nav-logo:last-child {
+    opacity: 0;
+    position: absolute;
+}
+
+.nav-container.scrolled .nav-logo:first-child {
+    opacity: 0;
+}
+
+.nav-container.scrolled .nav-logo:last-child {
+    opacity: 1;
 }
 
 .nav-links {
@@ -59,10 +92,14 @@ body {
 }
 
 .nav-link {
-    color: var(--text-dark);
+    color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+}
+
+.nav-container.scrolled .nav-link {
+    color: var(--text-dark);
 }
 
 .nav-link:hover {
@@ -76,11 +113,12 @@ body {
     border-radius: 2rem;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Hero Section */
@@ -785,6 +823,22 @@ body {
     
     .stat-value {
         font-size: 1.25rem;
+    }
+
+    .nav-container {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-logo {
+        height: 2rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-button {
+        padding: 0.5rem 1rem;
     }
 }
 

@@ -170,4 +170,16 @@ function showVideo() {
         // Example:
         // videoContainer.innerHTML = '<iframe src="YOUR_VIDDALYTICS_EMBED_URL" frameborder="0" allowfullscreen></iframe>';
     }
-} 
+}
+
+// Navigation scroll behavior
+const navContainer = document.querySelector('.nav-container');
+const scrollThreshold = 100; // Adjust this value to change when the nav changes
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > scrollThreshold) {
+        navContainer.classList.add('scrolled');
+    } else {
+        navContainer.classList.remove('scrolled');
+    }
+}); 
