@@ -15,8 +15,53 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
     <meta name="theme-color" content="#BF59FF">
+    <style>
+        @font-face {
+            font-family: 'Manrope';
+            src: url('assets/fonts/Manrope-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Manrope';
+            src: url('assets/fonts/Manrope-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Manrope';
+            src: url('assets/fonts/Manrope-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Manrope';
+            src: url('assets/fonts/Manrope-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: #1A1349;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            color: #1A1349;
+        }
+        .brand-purple { color: #BF59FF; }
+        .brand-dark-purple { color: #1A1349; }
+        .brand-light-purple { color: #9E0EFF; }
+        .bg-brand-purple { background-color: #BF59FF; }
+        .bg-brand-dark-purple { background-color: #1A1349; }
+        .bg-brand-light-purple { background-color: #9E0EFF; }
+    </style>
 </head>
-<body class="bg-white font-manrope">
+<body class="bg-white">
     <!-- Navigation -->
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-3">
