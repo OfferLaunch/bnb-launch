@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize smooth scrolling for navigation links
     initSmoothScrolling();
+    
+    // Initialize video functionality
+    initVideo();
 });
 
 // FAQ Accordion functionality
@@ -130,4 +133,41 @@ if (heroSection) {
         const scrollPosition = window.scrollY;
         heroSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
     });
+}
+
+// Video functionality
+function initVideo() {
+    const videoPlaceholder = document.querySelector('.video-placeholder');
+    const videoContainer = document.querySelector('.video-container');
+    const videoButton = document.querySelector('.video-button');
+    
+    if (videoPlaceholder && videoContainer) {
+        // Handle video placeholder click
+        videoPlaceholder.addEventListener('click', () => {
+            showVideo();
+        });
+        
+        // Handle video button click
+        videoButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            showVideo();
+        });
+    }
+}
+
+function showVideo() {
+    const videoPlaceholder = document.querySelector('.video-placeholder');
+    const videoContainer = document.querySelector('.video-container');
+    
+    if (videoPlaceholder && videoContainer) {
+        // Hide placeholder
+        videoPlaceholder.style.display = 'none';
+        
+        // Show video container
+        videoContainer.style.display = 'block';
+        
+        // Add Viddlytics embed code here
+        // Example:
+        // videoContainer.innerHTML = '<iframe src="YOUR_VIDDALYTICS_EMBED_URL" frameborder="0" allowfullscreen></iframe>';
+    }
 } 
