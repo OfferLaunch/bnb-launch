@@ -337,44 +337,39 @@ body {
     text-align: center;
     margin-top: 4rem;
     padding: 3rem;
-    background: var(--bg-white);
+    background: var(--brand-purple) !important;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     position: relative;
     z-index: 1;
-    border: 1px solid rgba(191, 89, 255, 0.1);
+    border: none !important;
+    color: var(--text-light) !important;
 }
 
-.process-cta-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
+.process-cta-title,
 .process-cta-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-gray);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: var(--text-light) !important;
 }
 
 .process-cta-button {
-    background: var(--brand-purple);
-    color: var(--text-light);
+    background: var(--text-light) !important;
+    color: var(--brand-purple) !important;
     padding: 1rem 2rem;
     border-radius: 2rem;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-md);
 }
 
 .process-cta-button:hover {
+    background: var(--brand-dark-purple) !important;
+    color: var(--text-light) !important;
+    box-shadow: var(--shadow-lg) !important;
     transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
 }
 
 /* Course Section */
@@ -833,15 +828,12 @@ body {
     }
 
     .process-cta {
-        padding: 2rem;
+        padding: 2rem !important;
     }
     
-    .process-cta-title {
-        font-size: 1.75rem;
-    }
-    
-    .process-cta-subtitle {
-        font-size: 1.1rem;
+    .process-cta-button {
+        width: 100% !important;
+        max-width: 320px !important;
     }
 
     .testimonial-content {
