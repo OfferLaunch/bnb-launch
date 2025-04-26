@@ -11,6 +11,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize video functionality
     initVideo();
+    
+    // Scroll-based nav active underline
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = [
+        { id: 'how-it-works', link: null },
+        { id: 'course', link: null },
+        { id: 'testimonials', link: null },
+        { id: 'faq', link: null }
+    ];
+
+    // Map nav links to sections
+    sections.forEach(section => {
+        section.link = document.querySelector(`.nav-link[href="#${section.id}"]`);
+    });
+
+    function setActiveNav() {
+        let scrollPos = window.scrollY + 120; // Offset for fixed nav
+        let found = false;
+        sections.forEach(section => {
+            const el = document.getElementById(section.id);
+            if (el && scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (section.link) section.link.classList.add('active');
+                found = true;
+            }
+        });
+        // If no section found, remove all active
+        if (!found) navLinks.forEach(link => link.classList.remove('active'));
+    }
+    window.addEventListener('scroll', setActiveNav);
+    window.addEventListener('DOMContentLoaded', setActiveNav);
+    // Click: set active immediately
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
 });
 
 // FAQ Accordion functionality
