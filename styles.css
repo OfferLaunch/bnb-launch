@@ -723,92 +723,101 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--brand-dark-purple);
-    color: var(--text-light);
-    padding: 4rem 0 2rem;
+    background: #181828;
+    color: #fff;
+    padding: 3rem 0 1.5rem;
 }
 
-.footer-content {
+.footer-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.footer-logo-img {
-    height: 3rem;
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-}
-
 .footer-link {
-    color: var(--text-light);
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: var(--brand-light-purple);
-}
-
-.footer-copyright {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-contact-social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-email {
-    color: var(--text-light);
-    font-weight: 600;
-    text-decoration: none;
+    font-weight: 500;
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    position: relative;
+    padding: 0.25rem 0;
     transition: color 0.2s;
 }
-.footer-email:hover {
+.footer-link:hover,
+.footer-link.active {
     color: var(--brand-purple);
 }
 
-.footer-social-buttons {
+.footer-social {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .footer-social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.12);
-    color: var(--text-light);
+    background: rgba(255,255,255,0.10);
+    color: #fff;
     font-size: 1.3rem;
     transition: background 0.2s, color 0.2s, transform 0.2s;
     text-decoration: none;
     border: none;
 }
-.footer-social-btn.instagram:hover {
-    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+.footer-social-btn svg {
+    fill: #fff;
+}
+.footer-social-btn:hover {
+    background: var(--brand-purple);
     color: #fff;
     transform: scale(1.08);
 }
-.footer-social-btn.facebook:hover {
-    background: #1877f3;
+
+.footer-contact {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.footer-contact-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
     color: #fff;
-    transform: scale(1.08);
+}
+.footer-email {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+.footer-email:hover {
+    color: var(--brand-purple);
+}
+
+.footer-copyright {
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .footer-menu {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+    .footer-social {
+        gap: 1rem;
+    }
 }
 
 /* Animations */
