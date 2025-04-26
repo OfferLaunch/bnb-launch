@@ -112,9 +112,13 @@ body {
 }
 
 /* Remove focus outline for nav links/buttons */
-.nav-link:focus, .nav-button:focus {
+.nav-link:focus, .nav-link:active, .nav-link:visited,
+.nav-button:focus, .nav-button:active, .nav-button:visited {
     outline: none !important;
     box-shadow: none !important;
+    background: none !important;
+    border: none !important;
+    color: inherit !important;
 }
 
 .nav-button {
