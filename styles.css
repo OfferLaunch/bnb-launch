@@ -383,6 +383,7 @@ body {
     background: var(--bg-light);
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .course-section::before {
@@ -397,36 +398,36 @@ body {
 }
 
 .course-content {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
     position: relative;
     z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.course-text {
-    flex: 1;
-}
-
-.course-description {
-    font-size: 1.25rem;
-    color: var(--text-gray);
-    margin-bottom: 2rem;
-    line-height: 1.6;
+.course-features-box {
+    background: rgba(191, 89, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-md);
 }
 
 .course-features {
     list-style: none;
     padding: 0;
-    margin: 0 0 2rem 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .course-features li {
-    margin-bottom: 1rem;
+    margin: 0;
     padding-left: 2rem;
     position: relative;
     color: var(--text-dark);
     font-size: 1.1rem;
+    text-align: left;
 }
 
 .course-features li:before {
@@ -437,21 +438,27 @@ body {
     font-weight: 600;
 }
 
+.course-cta {
+    margin-top: 2rem;
+}
+
 .course-button {
     display: inline-block;
-    background: var(--brand-purple);
+    background: var(--brand-dark-purple);
     color: var(--text-light);
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     border-radius: 2rem;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
+    font-size: 1.1rem;
 }
 
 .course-button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+    background: var(--brand-purple);
 }
 
 .course-preview {
@@ -876,13 +883,17 @@ body {
         margin-bottom: 2rem;
     }
     
-    .course-features li {
-        text-align: left;
+    .course-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-features-box {
+        padding: 1.5rem;
     }
     
     .course-button {
         width: 100%;
-        text-align: center;
+        padding: 1rem;
     }
 }
 
