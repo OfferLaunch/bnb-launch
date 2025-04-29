@@ -8,6 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --brand-purple: #BF59FF;
+            --brand-dark-purple: #1A1349;
+            --brand-light-purple: #9E0EFF;
+        }
+        .brand-purple { color: var(--brand-purple); }
+        .brand-dark-purple { color: var(--brand-dark-purple); }
+        .bg-brand-purple { background-color: var(--brand-purple); }
+        .bg-brand-dark-purple { background-color: var(--brand-dark-purple); }
+        .border-brand-purple { border-color: var(--brand-purple); }
         .purple-heading {
             color: #6B46C1;
         }
@@ -33,7 +43,7 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-white">
     <!-- Logo -->
     <div class="flex justify-center py-8">
         <img src="assets/logos/White and blue logo.png" alt="BNB Launch Logo" class="h-16">
