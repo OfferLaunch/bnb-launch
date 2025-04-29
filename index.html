@@ -6,13 +6,6 @@
     <title>BNB Launch - Start Your Airbnb Arbitrage Business</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="text/javascript">
-        (function (v, i, d, a, l, y, t, c, s) {
-            y='_'+d.toLowerCase();if(!v[y]){v[y]={}}if(!v[y].embeds){v[y].embeds={}}
-            t=function(){if(v[d]&&v[d].Embed){var ve=v[d].Embed;c=new ve();c.run(a);c.loadCss();}else{setTimeout(t,1000)}};s=new XMLHttpRequest();s.open("GET",l+'?ac='+(new Date()).getTime(),true);
-            s.onreadystatechange=function(){if(s.readyState==4){if((s.status==200||s.status==304)){var sd=JSON.parse(s.responseText);v[y].embeds[a]={type:"video",options: sd};t();}}};s.send();
-        })(window, document, 'Vidalytics', 'L4152FvGiUF5d6S6', 'https://fast.vidalytics.com/embeds/fumbuU7I/L4152FvGiUF5d6S6/player.settings.json');
-    </script>
     <style>
         :root {
             --brand-purple: #BF59FF;
@@ -145,7 +138,18 @@
                 </div>
                 <div class="relative rounded-2xl overflow-hidden shadow-xl bg-white p-4">
                     <div class="aspect-video w-full">
-                        <div id="L4152FvGiUF5d6S6" class="w-full h-full"></div>
+                        <div id="vidalytics_embed_L4152FvGiUF5d6S6" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+                        <script type="text/javascript">
+                        (function (v, i, d, a, l, y, t, c, s) {
+                            y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+                            if (!vsl){vsl=function(u,cb){
+                                if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                                if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                                i.getElementsByTagName("head")[0].appendChild(s);
+                            };}
+                            vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+                        })(window, document, 'Vidalytics', 'vidalytics_embed_L4152FvGiUF5d6S6', 'https://fast.vidalytics.com/embeds/fumbuU7I/L4152FvGiUF5d6S6/');
+                        </script>
                     </div>
                 </div>
             </div>
