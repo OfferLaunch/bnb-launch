@@ -19,11 +19,15 @@
             --brand-dark-purple: #1A1349;
             --brand-light-purple: #9E0EFF;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         .brand-purple { color: var(--brand-purple); }
         .brand-dark-purple { color: var(--brand-dark-purple); }
         .bg-brand-purple { background-color: var(--brand-purple); }
         .bg-brand-dark-purple { background-color: var(--brand-dark-purple); }
         .border-brand-purple { border-color: var(--brand-purple); }
+        .bg-light-purple { background-color: rgba(191, 89, 255, 0.05); }
 
         /* Custom shadow styles */
         .card-shadow {
@@ -77,7 +81,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-light-purple">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
