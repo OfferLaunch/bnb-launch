@@ -47,6 +47,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
+            entry.target.classList.remove('opacity-0', 'translate-y-4');
             observer.unobserve(entry.target);
         }
     });
@@ -54,7 +55,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add fade-in animation to sections
 document.querySelectorAll('section').forEach(section => {
-    section.classList.add('opacity-0', 'translate-y-4');
+    section.style.opacity = '1'; // Ensure sections are visible by default
+    section.style.transform = 'translateY(0)'; // Reset transform
     observer.observe(section);
 });
 

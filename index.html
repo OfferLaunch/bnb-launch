@@ -17,6 +17,18 @@
         .bg-brand-purple { background-color: var(--brand-purple); }
         .bg-brand-dark-purple { background-color: var(--brand-dark-purple); }
         .border-brand-purple { border-color: var(--brand-purple); }
+
+        /* Ensure sections are visible by default */
+        section {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
     </style>
 </head>
 <body class="bg-white">
