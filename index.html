@@ -18,6 +18,24 @@
         .bg-brand-dark-purple { background-color: var(--brand-dark-purple); }
         .border-brand-purple { border-color: var(--brand-purple); }
 
+        /* Custom shadow styles */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(26, 19, 73, 0.1),
+                        0 2px 4px -1px rgba(26, 19, 73, 0.06),
+                        0 0 0 1px rgba(26, 19, 73, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(26, 19, 73, 0.1),
+                        0 4px 6px -2px rgba(26, 19, 73, 0.05),
+                        0 0 0 1px rgba(26, 19, 73, 0.1);
+            transform: translateY(-2px);
+        }
+        .section-shadow {
+            box-shadow: 0 4px 6px -1px rgba(26, 19, 73, 0.1),
+                        0 2px 4px -1px rgba(26, 19, 73, 0.06);
+        }
+
         /* Ensure sections are visible by default */
         section {
             opacity: 1 !important;
@@ -87,21 +105,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 text-brand-dark-purple">How It Works</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-xl card-shadow">
                     <div class="w-12 h-12 bg-brand-purple/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-search text-brand-purple text-xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-brand-dark-purple">Property Acquisition</h3>
                     <p class="text-gray-700">We help you find and evaluate the perfect properties for your Airbnb business.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-xl card-shadow">
                     <div class="w-12 h-12 bg-brand-purple/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-tools text-brand-purple text-xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-brand-dark-purple">Setup & Design</h3>
                     <p class="text-gray-700">Professional guidance on furnishing, styling, and optimizing your property.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-xl card-shadow">
                     <div class="w-12 h-12 bg-brand-purple/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-graduation-cap text-brand-purple text-xl"></i>
                     </div>
@@ -117,7 +135,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 text-brand-dark-purple">Success Stories</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                <div class="bg-gray-50 p-8 rounded-xl card-shadow">
                     <div class="aspect-video mb-4">
                         <iframe class="w-full h-full rounded-lg" 
                                 src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
@@ -135,7 +153,7 @@
                     </div>
                     <p class="text-gray-700">"BNB Launch helped me start my Airbnb business with confidence. The support and training were invaluable."</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                <div class="bg-gray-50 p-8 rounded-xl card-shadow">
                     <div class="aspect-video mb-4">
                         <iframe class="w-full h-full rounded-lg" 
                                 src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
@@ -153,7 +171,7 @@
                     </div>
                     <p class="text-gray-700">"The community and course materials provided everything I needed to scale my business successfully."</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                <div class="bg-gray-50 p-8 rounded-xl card-shadow">
                     <div class="aspect-video mb-4">
                         <iframe class="w-full h-full rounded-lg" 
                                 src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" 
@@ -180,7 +198,7 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 text-brand-dark-purple">Frequently Asked Questions</h2>
             <div class="space-y-4">
-                <div class="border rounded-lg bg-white">
+                <div class="border rounded-lg bg-white card-shadow">
                     <button class="w-full p-4 text-left flex justify-between items-center">
                         <span class="font-semibold text-brand-dark-purple">How long does it take to get started?</span>
                         <i class="fas fa-chevron-down text-brand-purple"></i>
@@ -189,7 +207,7 @@
                         <p class="text-gray-700">The timeline varies based on your goals and property availability, but most clients are up and running within 2-3 months.</p>
                     </div>
                 </div>
-                <div class="border rounded-lg bg-white">
+                <div class="border rounded-lg bg-white card-shadow">
                     <button class="w-full p-4 text-left flex justify-between items-center">
                         <span class="font-semibold text-brand-dark-purple">What's included in the program?</span>
                         <i class="fas fa-chevron-down text-brand-purple"></i>
@@ -198,7 +216,7 @@
                         <p class="text-gray-700">Our comprehensive program covers everything from property selection to guest management, pricing strategies, and scaling your business.</p>
                     </div>
                 </div>
-                <div class="border rounded-lg bg-white">
+                <div class="border rounded-lg bg-white card-shadow">
                     <button class="w-full p-4 text-left flex justify-between items-center">
                         <span class="font-semibold text-brand-dark-purple">Do I need previous experience?</span>
                         <i class="fas fa-chevron-down text-brand-purple"></i>
