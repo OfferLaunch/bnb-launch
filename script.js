@@ -18,15 +18,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
     let currentSection = '';
     const scrollPosition = window.pageYOffset + 100; // Add offset for better detection
-    
+
+    // If at the very top, set Home as active
+    if (window.pageYOffset < 100) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const homeLink = document.querySelector('.nav-link[href="#"]');
+        if (homeLink) homeLink.classList.add('active');
+        return;
+    }
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         const sectionBottom = sectionTop + sectionHeight;
-        
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             currentSection = section.getAttribute('id');
         }
