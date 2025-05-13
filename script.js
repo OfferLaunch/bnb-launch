@@ -20,11 +20,14 @@ function updateActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
     
     let currentSection = '';
+    const scrollPosition = window.pageYOffset + 100; // Add offset for better detection
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 100) {
+        const sectionBottom = sectionTop + sectionHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             currentSection = section.getAttribute('id');
         }
     });
@@ -37,7 +40,19 @@ function updateActiveNavLink() {
     });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
+// Update active state on scroll with throttling
+let isScrolling = false;
+window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            updateActiveNavLink();
+            isScrolling = false;
+        });
+        isScrolling = true;
+    }
+});
+
+// Update active state on page load
 window.addEventListener('load', updateActiveNavLink);
 
 // FAQ Accordion functionality
