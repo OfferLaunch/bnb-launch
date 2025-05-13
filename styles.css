@@ -142,4 +142,10 @@
     height: 2px;
     background-color: #1A1349;
     animation: underline 0.3s ease-out forwards;
+}
+
+.nav-link:focus {
+    outline: 2px solid #BF59FF;
+    outline-offset: 2px;
+    box-shadow: none;
 } 
