@@ -1,5 +1,12 @@
-/* Smooth scrolling */
+
+
+/* Smooth scrolling - optimized for immediate response */
 html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
+}
+
+body {
     scroll-behavior: smooth;
 }
 
